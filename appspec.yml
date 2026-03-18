@@ -6,6 +6,11 @@ files:
     destination: /opt/codedeploy-agent/deployment-root
 
 hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: ubuntu
+
   AfterInstall:
     - location: deploy.sh
       timeout: 300
