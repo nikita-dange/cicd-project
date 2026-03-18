@@ -2,16 +2,15 @@
 
 echo "Deployment started"
 
-# Go to deployment directory
-cd /home/ec2-user
+cd /opt/codedeploy-agent/deployment-root/*/*/deployment-archive
 
-# Install Apache (if not installed)
-sudo yum update -y
-sudo yum install -y httpd
+# Install Apache (Ubuntu)
+sudo apt update -y
+sudo apt install apache2 -y
 
 # Start Apache
-sudo systemctl start httpd
-sudo systemctl enable httpd
+sudo systemctl start apache2
+sudo systemctl enable apache2
 
 # Clean old files
 sudo rm -rf /var/www/html/*
