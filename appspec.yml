@@ -9,7 +9,7 @@ hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: ubuntu
+      runas: ubuntu   # Ubuntu server असल्यामुळे
 
   AfterInstall:
     - location: deploy.sh
