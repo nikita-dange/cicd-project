@@ -1,16 +1,13 @@
 version: 0.0
 os: linux
-
 files:
   - source: /
-    destination: /opt/codedeploy-agent/deployment-root
-
+    destination: /home/ubuntu/my-app  # हा पाथ वापरा
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: ubuntu   # Ubuntu server असल्यामुळे
-
+      runas: ubuntu
   AfterInstall:
     - location: deploy.sh
       timeout: 300
