@@ -15,4 +15,4 @@ This project demonstrates a complete CI/CD pipeline using AWS services.
 GitHub → CodePipeline → CodeBuild → CodeDeploy → EC2  
 
 ## 📸 Project Screenshots
-[Download Screenshots PDF](./screenshots/screenshots.pdf?raw=true)
+<a href="./screenshots/screenshots.pdf" download>click here to download screenshots pdf</a>
